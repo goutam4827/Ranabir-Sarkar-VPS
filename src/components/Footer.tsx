@@ -1,7 +1,7 @@
 import React from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import vpsLogo from '../assets/images/vps_logo_1785592197948.jpg';
+import vpsLogo from '../assets/images/vps_brand_emblem_1785592852854.jpg';
 
 export const Footer: React.FC = () => {
   const scrollTo = (id: string) => {

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { Phone, MessageSquare, Menu, X, Bot, Palette } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
-import vpsLogo from '../assets/images/vps_logo_1785592197948.jpg';
+import vpsLogo from '../assets/images/vps_brand_emblem_1785592852854.jpg';
 
 interface HeaderProps {
   onOpenThemeModal: () => void;
@@ -21,27 +21,29 @@ export const Header: React.FC<HeaderProps> = ({ onOpenThemeModal }) => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-100 shadow-xs transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80 text-slate-800 dark:text-slate-100 shadow-xs transition-colors">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between transition-all">
         {/* Brand Logo & Title */}
         <div 
           onClick={() => scrollToSection('hero')} 
-          className="flex items-center space-x-3 cursor-pointer group"
+          className="flex items-center space-x-3.5 cursor-pointer group"
         >
-          <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-blue-700 via-indigo-600 to-amber-500 p-0.5 shadow-sm group-hover:scale-105 transition-transform overflow-hidden flex-shrink-0">
-            <img 
-              src={vpsLogo} 
-              alt="Visa Passport Services Logo" 
-              className="w-full h-full object-cover rounded-[10px]"
-              referrerPolicy="no-referrer"
-            />
+          <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-700 via-indigo-600 to-amber-500 p-[2px] shadow-md group-hover:shadow-blue-500/20 group-hover:scale-105 transition-all duration-300 overflow-hidden flex-shrink-0">
+            <div className="w-full h-full bg-white dark:bg-slate-900 rounded-[10px] overflow-hidden">
+              <img 
+                src={vpsLogo} 
+                alt="Visa Passport Services Logo" 
+                className="w-full h-full object-cover rounded-[10px] transform group-hover:scale-110 transition-transform duration-300"
+                referrerPolicy="no-referrer"
+              />
+            </div>
           </div>
           <div>
             <div className="flex items-center space-x-2">
               <span className="font-bold text-lg sm:text-xl tracking-tight text-slate-900 dark:text-white group-hover:text-blue-700 dark:group-hover:text-amber-400 transition-colors">
                 Visa Passport Services
               </span>
-              <span className="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+              <span className="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 border border-amber-300/80 dark:border-amber-700/60 shadow-xs">
                 VPS
               </span>
             </div>
