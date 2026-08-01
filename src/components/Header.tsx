@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import { Phone, MessageSquare, Menu, X, Compass, Bot, Palette } from 'lucide-react';
+import { Phone, MessageSquare, Menu, X, Bot, Palette } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import vpsLogo from '../assets/images/vps_logo_1785592197948.jpg';
 
 interface HeaderProps {
   onOpenThemeModal: () => void;
@@ -27,10 +28,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenThemeModal }) => {
           onClick={() => scrollToSection('hero')} 
           className="flex items-center space-x-3 cursor-pointer group"
         >
-          <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-blue-700 via-indigo-600 to-amber-500 p-0.5 shadow-sm group-hover:scale-105 transition-transform">
-            <div className="w-full h-full bg-white dark:bg-slate-900 rounded-[10px] flex items-center justify-center">
-              <Compass className="w-6 h-6 text-blue-700 dark:text-amber-400 group-hover:rotate-45 transition-transform duration-300" />
-            </div>
+          <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-blue-700 via-indigo-600 to-amber-500 p-0.5 shadow-sm group-hover:scale-105 transition-transform overflow-hidden flex-shrink-0">
+            <img 
+              src={vpsLogo} 
+              alt="Visa Passport Services Logo" 
+              className="w-full h-full object-cover rounded-[10px]"
+              referrerPolicy="no-referrer"
+            />
           </div>
           <div>
             <div className="flex items-center space-x-2">

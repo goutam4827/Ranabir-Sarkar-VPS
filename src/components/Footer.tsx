@@ -1,6 +1,7 @@
 import React from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import { Compass, Phone, Mail, MapPin, ExternalLink, Heart } from 'lucide-react';
+import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import vpsLogo from '../assets/images/vps_logo_1785592197948.jpg';
 
 export const Footer: React.FC = () => {
   const scrollTo = (id: string) => {
@@ -16,8 +17,13 @@ export const Footer: React.FC = () => {
           
           {/* Col 1: Brand */}
           <div className="space-y-3 md:col-span-1">
-            <div className="flex items-center space-x-2">
-              <Compass className="w-5 h-5 text-blue-700 dark:text-amber-400" />
+            <div className="flex items-center space-x-2.5">
+              <img 
+                src={vpsLogo} 
+                alt="Visa Passport Services Logo" 
+                className="w-8 h-8 rounded-lg object-cover border border-slate-200 dark:border-slate-700 shadow-xs flex-shrink-0"
+                referrerPolicy="no-referrer"
+              />
               <span className="font-bold text-slate-900 dark:text-white text-base">Visa Passport Services</span>
             </div>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
